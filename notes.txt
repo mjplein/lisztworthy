@@ -1,0 +1,2 @@
+authorization token: BQDyNCgfYHQazj7uefei3vcqu2CP97xqCqRz7O8Zz2tghKqHCJT3VQbZkZfkkvllHVxS-xowoTjvW3ae2aY
+POST https://accounts.spotify.com/api/token
