@@ -16,15 +16,27 @@ $(document).ready(function() {
     var database = firebase.database();
 
     //create click button to add music
-    $("#artist").on("click", function() {
+    $("#artistB").on("click", function() {
+        //var input
         event.preventDefault();
-    })
-    $("#song").on("click", function() {
+        var artist = $("#artists").val().trim();
+        console.log(artist);
 
-    })
-    $("#date").on("click", function() {
+    });
+    $("#songA").on("click", function() {
+        //var input
+        event.preventDefault();
+        var song = $("#songs").val().trim();
+        console.log(song);
+    });
+    $("#genreA").on("click", function() {
+        //var input
+        event.preventDefault();
+        var genre = $("#genres").val().trim();
+        console.log(genre);
 
-    })
+
+    });
 
 
 
