@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html class="no-js">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Liszt-Worthy</title>
+    <meta name="description" content="">
+    <link rel="stylesheet" type="text/css" href="Liszt-Worthy.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+   
+    <script src="https://www.gstatic.com/firebasejs/4.1.1/firebase.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.7.0/moment.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
+ 
+ </head>
+<body>
+	
+        <div class="container">
+            <div class="jumbotron" >
+            <img src="http://i65.tinypic.com/x1c19l.gif" width="850" height="180">
+            </div>
+  
+      <div class="panel-body">
+        <div class="row">
+         <form style="color:yellowgreen";> 
+           <div class="form-inline"> 
+              
+               <div class="col-md-4"> 
+                <button type="submit" class="btn-btn-default"><h4>Artist</h4></button>
+                <input type="text" class="form-control" id="ArtistInput" placeholder="#">
+               </div>
+                    
+               <div class="col-md-4">
+                <button type="submit" class="btn-btn-default"><h4>Song</h4></button>
+                <input type="text" class="form-control" id="SongInput" placeholder="#">
+               </div>
+                  
+               <div class="col-md-4">
+                <button type="submit" class="btn-btn-default"><h4>Gengre</h4></button>
+                <input type="text" class="form-control" id="GengreInput" placeholder="#">
+               </div>
+                
+            </div>   
+           </form> 
+        </div>
+     
+        
+         <div class="row">
+                <div class="col-md-12">
+                <div class="panel panel-primary">
+                <div class="panel-heading">
+                <table class="table table-hover table-responsive" style="background-color: none !important; color: none">
+                    <thead>
+                        <tr> 
+                            <th><h3>Artist</h3></th> 
+                            <th><h3>Title</h3></th>
+                            <th><h3>Length</h3></th>
+                            <th><h3>Year Produced</h3></th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="#">
+                      <tr></tr>                                
+                    </tbody>
+                </table>
+          </div>
+    
+    </div> <!-- Panel panel-primary-->
+    </div> <!-- panel-headingg -->
+    </div> <!-- Panel Body-->
+                      
+                 
+</body>
+</html>
