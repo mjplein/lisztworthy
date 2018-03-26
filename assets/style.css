@@ -11,7 +11,8 @@ h4{
    }  
      
 .jumbotron{
-     background-image: url("https://music-api.musikki.com/resources/images/backgrounds/back-facebook.png");
+   background-image: url("https://music-api.musikki.com/resources/images/backgrounds/back-facebook.png");
+   padding: 0.5em 0.6em;
    }
    
 td { 
