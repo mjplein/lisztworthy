@@ -1,2 +1,11 @@
-authorization token: BQDyNCgfYHQazj7uefei3vcqu2CP97xqCqRz7O8Zz2tghKqHCJT3VQbZkZfkkvllHVxS-xowoTjvW3ae2aY
-POST https://accounts.spotify.com/api/token
+3/22 authorization token: BQDyNCgfYHQazj7uefei3vcqu2CP97xqCqRz7O8Zz2tghKqHCJT3VQbZkZfkkvllHVxS-xowoTjvW3ae2aY
+3/23 BQB7JEhTsQ6OchnTrclsrdYfOcIDZ3RdIPUg0o6wdQItNIegoal6yDPFafiOxnPJ1NfQLJzwc3qftzrVdPY
+
+
+1. go to type: OAuth 2.0 
+2. "get new access token"
+3. fill out client id and client secret from account
+4. fill out access token URL: https://accounts.spotify.com/api/token
+5. change grant type to client credentials
+6. blank fields only were auth URL and Scope (Optional)
+
