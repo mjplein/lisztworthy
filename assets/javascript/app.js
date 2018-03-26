@@ -14,118 +14,72 @@
 
   $(document).ready(function() {
   
-// need getArtistID (artistName)
-var getArtistID = function (artistName) {
-    //takes argument of artistName and uses it to search Spotify for the ID
-    //stores it in a variable
-    $.ajax (
-        {
-        method: "GET",
-        url: "https://api.spotify.com/v1/search?q=" + artistName + "&type=artist&limit=100",
-        }).then(function (response) {
-            var spotArtistID = response.items.id
-            console.log (spotArtistID);
+        // Creating an AJAX call to retrieve "artist" data from API
+        function getArtistID(artistName) {
+
+        $.ajax({
+            dataType: "jsonp",
+            method: "GET",
+            url: "http://ws.audioscrobbler.com/2.0/?method=artist.getsimilar&artist=" + artistName + "&limit=10&api_key=1e38e427c82a703f191ad24ab52e8145&format=json",
+        }).then(function(response) {
+            var results = response.similarartists.artist;
+            for (var i = 0; i < results.length; i++) {
+            console.log(results[i].name)
+            }
         })
-  
-      // displayArtist function re-renders the HTML to display the "artist" content
-    function searchByArtist(artist) {
+    }
 
-        var artistBtn = $(this).attr("data-name");
-        var queryURL = "http://ws.audioscrobbler.com/2.0/?method=artist.getsimilar&artist=porcupine+tree&api_key=1e38e427c82a703f191ad24ab52e8145&format=json";
-        console.log(queryURL)
+        // Creating an AJAX call to retrieve "song" data from API
+        function getArtistSong(artistName, song) {
 
-        // Creating an AJAX call for the "artist" button being clicked
         $.ajax({
-            url: queryURL,
-            method: "GET"
+            dataType: "jsonp",
+            method: "GET",
+            url: "http://ws.audioscrobbler.com/2.0/?method=track.getsimilar&artist=" + artistName + "&track=" + song + "&limit=30&api_key=1e38e427c82a703f191ad24ab52e8145&format=json",
         }).then(function(response) {
+            var results = response.similartracks.track
+            for (var i = 0; i < results.length; i++) {
+            console.log(results[i].artist.name, " - ", results[i].name)
+        }
+        })
+    }
 
-    // displayArtist function re-renders the HTML to display the "track" content
-    function searchBySong(song) {
+        // Creating an AJAX call to retrieve "genre" data from API
+        function getGenreID(genreName) {
 
-        var trackBtn = $(this).attr("data-name");
-        var queryURL = "http://ws.audioscrobbler.com/2.0/?method=track.getsimilar&artist=opeth&track=coil&api_key=1e38e427c82a703f191ad24ab52e8145&format=json";
-        console.log(queryURL)
-
-        // Creating an AJAX call for the "track" button being clicked
         $.ajax({
-            url: queryURL,
-            method: "GET"
+            dataType: "jsonp",
+            method: "GET",
+            url: "http://ws.audioscrobbler.com/2.0/?method=tag.gettopartists&tag=" + genreName + "&limit=10&api_key=1e38e427c82a703f191ad24ab52e8145&format=json",
         }).then(function(response) {
-
-    // displayArtist function re-renders the HTML to display the "genre" content
-    function searchByGenre(genre) {
-
-        var genreBtn = $(this).attr("data-name");
-        var queryURL = "http://ws.audioscrobbler.com/2.0/?method=tag.gettopartists&tag=comedy&api_key=1e38e427c82a703f191ad24ab52e8145&format=json";
-        console.log(queryURL)
-
-        // Creating an AJAX call for the "genre" button being clicked
-        $.ajax({
-            url: queryURL,
-            method: "GET"
-        }).then(function(response) {
-  
-}
-
-    
-// need var function spotRecommendArtist    
-    //searches for the recommendations using the ID
-    //stores list of recommendations    
+            var results = response.topartists.artist;
+            for (var i = 0; i < results.length; i++) {
+            console.log(results[i].name)
+            }
+        })
+    }
     
     //create click button to add music
     $("#artistB").on("click", function() {
         //var input
         event.preventDefault();
-        var artist = $("#artists").val().trim();
-        console.log(artist);
-
-    });
+        var artistName = $("#artists").val().trim();
+        getArtistID(artistName);
+        console.log(artistName);
+        });
     $("#songA").on("click", function() {
         //var input
         event.preventDefault();
         var song = $("#songs").val().trim();
-        console.log(song);
-    });
+        var artistName = $("#artists").val().trim();
+        getArtistSong(artistName, song);
+        console.log(artistName, song);
+        });
     $("#genreA").on("click", function() {
         //var input
         event.preventDefault();
         var genre = $("#genres").val().trim();
+        getGenreID(genre);
         console.log(genre);
-
-
-    });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-});
+        });
+})
