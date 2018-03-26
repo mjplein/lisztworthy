@@ -32,7 +32,7 @@
         // Creating an AJAX call to retrieve "song" data from API
         function getArtistSong(artistName, song) {
 
-        $.ajax({
+        $.ajax({    
             dataType: "jsonp",
             method: "GET",
             url: "http://ws.audioscrobbler.com/2.0/?method=track.getsimilar&artist=" + artistName + "&track=" + song + "&limit=30&api_key=1e38e427c82a703f191ad24ab52e8145&format=json",
