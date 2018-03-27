@@ -23,26 +23,28 @@
 
 </head>
 
-<body>
+<body>:
     <div class="container">
+        <div class="row" style=" text-align:center; color:White;">
 
-        <div class="jumbotron" style="background-color: Gray; color: white; text-align: center;">
+            <h1 class="h1">LISZT-WORTHY</h1>
 
-            <h1>LISZT-WORTHY</h1>
-            <p>The world is full of poetry. The air is living with its spirit; and the waves dance to the music of its melodies, and sparkle in its brightness.</p>
+            <img id="liszt" src="https://r.hswstatic.com/w_907/gif/podcasts/missedinhistory-podcasts-wp-content-uploads-sites-99-2015-09-Lisztomania-P-660x357.jpg" style="width:300px;height:150px;">
+            <img id="liszt1" src="https://r.hswstatic.com/w_907/gif/podcasts/missedinhistory-podcasts-wp-content-uploads-sites-99-2015-09-Lisztomania-P-660x357.jpg" style="width:400px;height:150px;">
+            <img id="liszt2" src="https://r.hswstatic.com/w_907/gif/podcasts/missedinhistory-podcasts-wp-content-uploads-sites-99-2015-09-Lisztomania-P-660x357.jpg" style="width:300px;height:150px;">
+
         </div>
-
         <form class="form-inline">
             <input class="form-control mr-sm-2" type="text" placeholder="Name" aria-label="Search" id="artists">
-            <button class="btn btn-outline-success my-2 my-sm-0" id="artistB" type="text">Artist</button>
+            <button type="button" class="btn btn-lg btn-danger" data-toggle="list of Artist" title="Chose your favorite" data-content="Artist The true beauty of music is that it connects people. It carries a message" id="artistB">Artist</button>
 
 
             <input class="form-control mr-sm-2" type="text" placeholder="Title" aria-label="Search" id="songs">
-            <button class="btn btn-outline-success my-2 my-sm-0" id="songA" type="text">Song</button>
+            <button type="button" class="btn btn-lg btn-danger" data-toggle="list of songs" title="Chose your Music" data-content="Hit the Music and Listen" id="songA">Song</button>
 
 
             <input class="form-control" type="text" placeholder="" aria-label="Search" id="genres">
-            <button class="btn btn-outline-success my-2 my-sm-0" id="genreA" type="text">Genre</button>
+            <button type="button" class="btn btn-lg btn-danger" data-toggle="list of Genre" title="Different Kinds of HIP HOP" data-content="The beauty and vairation of music is that it connects people" id="genreA">Genre</button>
 
         </form>
 
@@ -50,21 +52,23 @@
             <div class="col-lg- 12">
                 <div class="panel panel-primary">
                     <div class="panel-heading">
-                        <h3 class="panel-title" style="color:orange; text-align:center; margin: 20px;"><strong>CHOOSE MUSIC</strong></h2>
+
+                        <h3 class="panel-title" id="h3" style="color: yellow; text-align:center; margin: 20px;"><strong>CHOOSE MUSIC</strong></h2>
+
                     </div>
                     <div class=" panel-body ">
-                        <table class="table table-hover table-responsive" id="music" style="background-color: none !important; color: none">
+                        <table class="table table-hover">
                             <thead>
                                 <tr>
-                                    <th>Music Title</th>
-                                    <th>Artist</th>
-                                    <th>Length</th>
-                                    <th>year Produce</th>
-                                    <th>Rating</th>
 
+                                    <th scope="col-lg-3">Artist</th>
+                                    <th scope="col-lg-3">Track</th>
                                 </tr>
                             </thead>
-                            <tbody id="trainTable">
+
+                            <tbody>
+
+
                             </tbody>
                         </table>
 

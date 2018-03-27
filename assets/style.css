@@ -1,60 +1,81 @@
-.panel-heading{background-image: url(https://images.unsplash.com/photo-1489643658557-a45d05e2a3dd?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=2230e6e5b8147e317ffd6e873845e79d&w=1000&q=80);   
-  }
+.panel-heading {
+    background-image: url(https://media1.giphy.com/media/l41lHDSvmwnQGDUD6/200w.webp);
+}
 
-h4{
-   text-shadow:3px 0px 0px rgb(125, 2, 141);
-   color: yellowgreen
-   }
- 
- body {
-    background-image: url("https://i.makeagif.com/media/3-27-2015/1HsWfp.gif");................add or sub anything
-   }  
-     
-.jumbotron{
-     background-image: url("https://music-api.musikki.com/resources/images/backgrounds/back-facebook.png");
-   }
-   
-td { 
+h4 {
+    text-shadow: 3px 0px 0px rgb(125, 2, 141);
+    color: yellowgreen
+}
+
+body {
+    background-image: url("https://i.makeagif.com/media/3-27-2015/1HsWfp.gif");
+}
+
+.hi {
+    text-align: center;
+    text-decoration: magenta;
+}
+
+#liszt {
+    position: relative;
+    right: 130px;
+    bottom: 120px;
+}
+
+#liszt1 {
+    position: relative;
+    background-color: red;
+    border: 2px solid maroon;
+}
+
+#liszt2 {
+    position: relative;
+    left: 130px;
+    bottom: 120px;
+}
+
+td {
     font-size: 13px !important;
     font-weight: 80 !important;
-   } 
- 
- .panel-primary{
+}
+
+.panel-primary {
     min-height: 500px;
-   } 
-    
- h3{
-    color:yellowgreen;
+}
+
+h3 {
+    color: yellowgreen;
     text-shadow: 3px 1px 0px rgb(197, 11, 11);
-    text-align:center;
-    }
-   
-  #ArtistInput{
+    text-align: center;
+}
+
+#artists {
     border-style: solid;
     border-width: 5px;
     border-color: rgb(228, 34, 163);
     background-color: #ffffff;
     border-radius: 30px;
-    width:220px;   
-    }
-     
-   #SongInput{
-     border-style: solid;
-     border-width: 5px;
-     border-color: rgb(228, 34, 163);
-     background-color: #ffffff;
-     border-radius: 30px;
-     width:220px; 
-    }
-    
-   #GengreInput{
-     border-style: solid;
-     border-width: 5px;
-     border-color: rgb(228, 34, 163);
-     background-color: #ffffff;
-     border-radius: 30px;
-     width:210px;
-    }
-  .btn-btn-default{
-    background-image: url(https://images.unsplash.com/photo-1489643658557-a45d05e2a3dd?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=2230e6e5b8147e317ffd6e873845e79d&w=1000&q=80);   
-    }
+    width: 24.99%;
+}
+
+#songs {
+    border-style: solid;
+    border-width: 5px;
+    border-color: rgb(228, 34, 163);
+    background-color: #ffffff;
+    border-radius: 30px;
+    width: 25.99%;
+}
+
+#genres {
+    border-style: solid;
+    border-width: 5px;
+    border-color: rgb(228, 34, 163);
+    background-color: #ffffff;
+    border-radius: 30px;
+    width: 24.99%;
+}
+
+.btn-btn-default {
+    background-image: url(https://images.unsplash.com/photo-1489643658557-a45d05e2a3dd?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=2230e6e5b8147e317ffd6e873845e79d&w=1000&q=80);
+}
