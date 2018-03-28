@@ -4,83 +4,79 @@
 
 <head>
 
-    <meta charset="UTF-8">
-    <title>Music</title>
+   <meta charset="UTF-8">
+   <title>Liszt-Worthy: Music Discovery</title>
 
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <!-- Bootstrap -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-    <!-- Firebase Reference -->
-    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
-    <!-- Moment.js Reference -->
-    <script src="http://momentjs.com/downloads/moment.js"></script>
-    <!-- jquery-->
-    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
-    <!---css-->
-    <link rel="stylesheet" type="text/css" href="assets/style.css">
+   <!-- Firebase Reference -->
+   <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+   <!-- Moment.js Reference -->
+   <script src="http://momentjs.com/downloads/moment.js"></script>
+   <!-- jquery-->
+   <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+   <!---css-->
+   <link rel="stylesheet" type="text/css" href="assets/style.css">
+   <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">
 
 </head>
 
-<body>
-    <div class="container">
+<body>:
+   <div class="container">
 
-        <div class="jumbotron" style="background-color: Gray; color: white; text-align: center;">
+       <div class="jumbotron" style="text-align: center">
+           <h1 class="title">LISZT-WORTHY</h1>
+           <p class="title">Music discovery for the simple & sophisticated</p>
+           <img class="title" src="https://r.hswstatic.com/w_907/gif/podcasts/missedinhistory-podcasts-wp-content-uploads-sites-99-2015-09-Lisztomania-P-660x357.jpg" style="width:500px;height:300px;">
+       </div>
+       <form class="form-inline">
+            <input class="form-control mr-sm-2" type="text" placeholder="Enter an Artist" aria-label="Search" id="artists" required>
+            <button type="submit" class="btn btn-lg btn-info" data-toggle="list of Artist" id="artistB">Submit</button>
 
-            <h1>LISZT-WORTHY</h1>
-            <p>Music discovery for the simple & sophisticated</p>
-        </div>
+           <input class="form-control mr-sm-2" type="text" placeholder="Enter a Song" aria-label="Search" id="songs" required>
+           <button type="submit" class="btn btn-lg btn-info" data-toggle="list of songs" id="songA">Submit</button>
 
-        <form class="form-inline">
-            <input class="form-control mr-sm-2" type="text" placeholder="Choose an Artist" aria-label="Search" id="artists">
-            <button class="btn btn-outline-success my-2 my-sm-0" id="artistB" type="text">Artist</button>
-
-
-            <input class="form-control mr-sm-2" type="text" placeholder="Choose a Song" aria-label="Search" id="songs">
-            <button class="btn btn-outline-success my-2 my-sm-0" id="songA" type="text">Song</button>
-
-
-            <input class="form-control" type="text" placeholder="Choose a Genre" aria-label="Search" id="genres">
-            <button class="btn btn-outline-success my-2 my-sm-0" id="genreA" type="text">Genre</button>
-
-        </form>
-
-        <div clas="row">
-            <div class="col-lg- 12">
-                <div class="panel panel-primary">
-                    <div class="panel-heading">
-                        <h3 class="panel-title" style="color:orange; text-align:center; margin: 20px;"><strong>CHOOSE MUSIC</strong></h2>
-                    </div>
-                    <div class=" panel-body ">
-                        <table class="table table-hover table-responsive" id="music" style="background-color: none !important; color: none">
-                            <thead>
-                                <tr>
-                                    <th>Music Title</th>
-                                    <th>Artist</th>
-                                    <th>Length</th>
-                                    <th>year Produce</th>
-                                    <th>Rating</th>
-
-                                </tr>
-                            </thead>
-                            <tbody id="trainTable">
-                            </tbody>
-                        </table>
-
-                    </div>
-
-                </div>
+<br><br>
 
 
-            </div>
+       </form>
 
-        </div>
+       <div clas="row">
+           <div class="col-lg- 12">
+               <div class="panel panel-primary">
+                   <div class=" panel-body ">
+                       <table class="table table-hover">
+                           <thead>
+                               <tr>
 
-    </div>
+                                   <th scope="col-lg-3">Searched Artist</th>
+                                   <th scope="col-lg-3">Searched Song</th>
+                                   <th scope="col-lg-3">Results</th>
+                               </tr>
+                           </thead>
 
-    <!-- JavaScript -->
-    <script type="text/javascript" src="assets/javascript/app.js"></script>
+                           <tbody>
+                               <tbody id="artistA">
+
+                               </tbody>
+                       </table>
+
+                   </div>
+
+               </div>
+
+
+           </div>
+
+       </div>
+
+   </div>
+
+   <!-- JavaScript -->
+   <script type="text/javascript" src="assets/javascript/app.js"></script>
 
 
 </body>
